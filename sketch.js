@@ -4,8 +4,8 @@ let data = []; //the list of data from arduino
 
 let video;
 let w = 640;
-let h = 500;
-let distance = 0;
+let h = 480;
+
 
 let osc; //this is used to generate a sound frequency in p5
 
@@ -25,7 +25,7 @@ function draw() {
   console.log (video.pixels.length,width*height*4);
   // console.log()
   
-  let boxSize = int(map(distance, 0, 400, 12, 32));
+  let boxSize = int(map(mouseX, 0, 620, 12, 32));
   
   for (let y=0;y<video.height;y+=boxSize){
     for (let x=0; x<video.width; x+=boxSize){
